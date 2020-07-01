@@ -19,7 +19,7 @@ public class ThreadTest extends Thread{
         System.out.println(this.currentThread().getName()+"count = " + count);
     }*/
     //案例1，
-   /* public  synchronized  void printNum(String tag){
+    public  synchronized  void printNum(String tag){
 
         if(tag.equals("a")){
             count = 100;
@@ -29,7 +29,7 @@ public class ThreadTest extends Thread{
             System.out.println("tag b, set num over");
         }
         System.out.println("tag " + tag +",count = " + count);
-    }*/
+    }
 
 
     public  void printNum2(String tag){
