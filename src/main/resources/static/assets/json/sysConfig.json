@@ -1,0 +1,25 @@
+{
+  "code": 0,
+  "msg": "ok",
+  "count": 1,
+  "data": {
+	"id":"00000000-0000-0000-0000-000000000001",
+	"name":"Layui Fun Content Management System",
+	"title":"layui fun cms 后台管理系统",
+	"remark":"layui fun cms 是一个基于 layui 的动态生成导航菜单的管理面板项目，它的核心功能是在前端通过序列化的菜单数据来渲染生成符合 layui 语义化的水平导航菜单与垂直导航菜单结构，导航菜单点击后将会在客户端缓存，因此刷新页面后，右侧iframe载入区域将保持打开上一个页面链接。基于框架：layui-v2.4.5，主要特色：水平导航，垂直导航，响应式，简洁，清爽。",
+	"hoemPage":"/admin/index.html",
+	"sysVersion":"v1.0.1",
+	"developer":"方科新",
+	"logo":null,
+	"principalName":"科新前端",
+	"serverInfo":"Window Server 2008 R2",
+	"databaseInfo":"MySql 5.8",
+	"uploadMaxSize":204800,
+	"uploadImageMaxSize": 204800,
+	"uploadImageTypes":".png.gif.jpg.jpeg.bmp",
+	"uploadFileTypes":".txt.pdf.xls.xlsx.doc.docx.zip.rar",	
+	"copyright":"All rights reserved. 版权所有，翻版必究。",
+	"webIcpCode":"鄂ICP备12345678号",
+	"enable": true
+	}
+}

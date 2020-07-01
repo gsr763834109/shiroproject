@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <script type="text/javascript" src="../static/js/jquery-3.4.1.min.js" ></script>
+    <script type="text/javascript" src="../static/layui/layui.js" ></script>
+    <link rel="stylesheet" href="../static/layui/css/layui.css" />
+    <link rel="stylesheet" href="../static/login/style.css" />
+
+    <style>
+        html,body{
+            height: 100%;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("../static/images/login_bg.png");
+            background-size: cover;
+        }
+    </style>
+    <script type="text/javascript">
+
+        layui.use('form',function(data){
+            var form = layui.form;
+            //刷新界面 所有元素
+            form.render();
+            form.on('submit(demo1)', function (data) {
+                $.post('/shiro/loginUser',data.field,function (r) {
+                    if (r == "0") {
+                        window.location.href="http://127.0.0.1:9011/shiro/show"
+                    } else if(r == "-1"){
+                        layer.alert('密码错误！', {
+                            icon: 2,
+                            skin: 'layer-ext-moon' //该皮肤由layer.seaning.com友情扩展。关于皮肤的扩展规则，去这里查阅
+                        })
+                    }else if(r == "-2"){
+                        layer.alert('用户不存在！', {
+                            icon: 2,
+                            skin: 'layer-ext-moon' //该皮肤由layer.seaning.com友情扩展。关于皮肤的扩展规则，去这里查阅
+                        })
+                    }
+                })
+
+
+               /* $.ajax({
+                    type:"POST",
+                    url: "http://127.0.0.1:9011/shiro/loginUser",
+                    data: data.field ,
+                    success: function (result) {
+                        if (result == "0") {
+                            window.location.href="http://127.0.0.1:9011/shiro/show"
+                        } else if(result == "-1"){
+                            layer.alert('密码错误！', {
+                                icon: 2,
+                                skin: 'layer-ext-moon' //该皮肤由layer.seaning.com友情扩展。关于皮肤的扩展规则，去这里查阅
+                            })
+                        }else if(result == "-2"){
+                            layer.alert('用户不存在！', {
+                                icon: 2,
+                                skin: 'layer-ext-moon' //该皮肤由layer.seaning.com友情扩展。关于皮肤的扩展规则，去这里查阅
+                            })
+                        }
+
+                    }
+                });*/
+                return false;
+            });
+        });
+
+    </script>
+
+</head>
+<body>
+    <div class="login-div">
+        <h1>登录</h1>
+        <form class="layui-form" action="" lay-filter="example">
+            <div class="layui-form-item">
+                <!--<label class="layui-form-label">账号：</label>-->
+                <div class="login-form-item">
+                    <input type="text" name="userName"  id="userName"  lay-verify="title" autocomplete="off" placeholder="账号" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <!--<label class="layui-form-label">密码：</label>-->
+                <div class="login-form-item">
+                    <input type="password" name="userPassword"  id="userPassword"   placeholder="密码" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="login-form-item">
+                    <button type="submit" class="btn-login" lay-submit="" lay-filter="demo1">登录</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

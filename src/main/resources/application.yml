@@ -1,0 +1,48 @@
+server:
+  port: 9011
+  tomcat:
+    uri-encoding: utf-8
+  max-http-header-size: 102400
+  undertow:
+    max-http-post-size: -1
+spring:
+  profiles:
+    active: dev
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+  aop:
+    proxy-target-class: true
+
+#thymeleaf模板
+  thymeleaf:
+    prefix:  classpath:/templates/
+    #检查模板位置是否存在
+    check-template-location: true
+    suffix: .html
+    encoding: utf-8
+    servlet:
+      content-type: text/html
+    mode: HTML5
+    #开发配置为false,避免修改模板还要重启服务器
+    cache: true
+    enabled: true
+
+
+  mvc:
+        static-path-pattern: /static/**
+        view:
+          prefix: classpath:/templates/
+          suffix: .html
+
+mybatis-plus:
+  # 实体类扫描路径
+  type-aliases-package: com.myself.shiroproject.model
+  # xml 扫描路径
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    jdbc-type-for-null: null
+  global-config:
+    # 关闭 mybatis-plus的 banner
+    banner: false

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.myself.shiroproject.dao.RegistrantMapper">
+  <resultMap id="BaseResultMap" type="com.myself.shiroproject.model.Registrant">
+    <id column="registrant_id" jdbcType="INTEGER" property="registrantId" />
+    <result column="registrant_name" jdbcType="VARCHAR" property="registrantName" />
+    <result column="registrant_age" jdbcType="VARCHAR" property="registrantAge" />
+    <result column="registrant_sex" jdbcType="VARCHAR" property="registrantSex" />
+    <result column="registrant_education" jdbcType="VARCHAR" property="registrantEducation" />
+    <result column="registrant_phone" jdbcType="VARCHAR" property="registrantPhone" />
+    <result column="registrant_pwd" jdbcType="VARCHAR" property="registrantPwd" />
+    <result column="registrant_hospital" jdbcType="INTEGER" property="registrantHospital" />
+    <result column="registrant_lock" jdbcType="INTEGER" property="registrantLock" />
+    <result column="registrant_plan_train" jdbcType="INTEGER" property="registrantPlanTrain" />
+    <result column="registrant_plan_all" jdbcType="INTEGER" property="registrantPlanAll" />
+    <result column="registrant_modify_time" jdbcType="TIMESTAMP" property="registrantModifyTime" />
+    <result column="registrant_cut_time" jdbcType="TIMESTAMP" property="registrantCutTime" />
+    <result column="registrant_gold" jdbcType="INTEGER" property="registrantGold" />
+    <result column="registrant_train_time" jdbcType="TIMESTAMP" property="registrantTrainTime" />
+    <result column="registrant_creat_time" jdbcType="TIMESTAMP" property="registrantCreatTime" />
+
+      <collection  property="evaluations" ofType="com.myself.shiroproject.model.EvaluationWithBLOBs">
+          <id column="evaluation_id" jdbcType="INTEGER" property="evaluationId" />
+          <result column="evaluation_regist_id" jdbcType="INTEGER" property="evaluationRegistId" />
+          <result column="evaluation_creat_time" jdbcType="TIMESTAMP" property="evaluationCreatTime" />
+          <result column="evaluation_score" jdbcType="LONGVARCHAR" property="evaluationScore" />
+      </collection>
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.myself.shiroproject.model.Registrant">
+    <result column="registrant_plan" jdbcType="LONGVARCHAR" property="registrantPlan" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    registrant_id, registrant_name, registrant_age, registrant_sex, registrant_education, 
+    registrant_phone, registrant_pwd, registrant_hospital, registrant_lock, registrant_plan_train,
+    registrant_plan_all, registrant_modify_time, registrant_cut_time, registrant_gold,
+    registrant_train_time, registrant_creat_time
+  </sql>
+  <sql id="Blob_Column_List">
+    registrant_plan
+  </sql>
+  <select id="selectAll"  resultMap="ResultMapWithBLOBs">
+    SELECT
+       r.registrant_id,r.registrant_name, r.registrant_age, r.registrant_sex, r.registrant_education,
+    r.registrant_phone,e.evaluation_regist_id,e.evaluation_score
+    FROM
+         (
+        SELECT
+            evaluation.evaluation_regist_id,evaluation.evaluation_score,
+            MAX(
+                evaluation.evaluation_creat_time
+            )
+
+        FROM
+            evaluation
+        GROUP BY
+            evaluation_regist_id
+    ) AS e   LEFT JOIN  registrant AS r ON r.registrant_id = e.evaluation_regist_id
+    WHERE
+        r.registrant_phone IS NOT NULL
+  </select>
+
+
+</mapper>

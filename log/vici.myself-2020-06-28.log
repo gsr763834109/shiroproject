@@ -1,0 +1,147 @@
+2020-06-28 11:03:00.752 [main] INFO  com.myself.shiroproject.ShiroprojectApplication 55- Starting ShiroprojectApplication on DESKTOP-684PCSN with PID 5460 (D:\Users\project\layui\shiroproject\target\classes started by vici in D:\Users\project\layui\shiroproject)
+2020-06-28 11:03:00.755 [main] DEBUG com.myself.shiroproject.ShiroprojectApplication 56- Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+2020-06-28 11:03:00.756 [main] INFO  com.myself.shiroproject.ShiroprojectApplication 655- The following profiles are active: dev
+2020-06-28 11:03:03.750 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate 249- Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-28 11:03:03.754 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate 127- Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-06-28 11:03:03.870 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate 187- Finished Spring Data repository scanning in 89ms. Found 0 Redis repository interfaces.
+2020-06-28 11:03:04.405 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'shiroConfiguration' of type [com.myself.shiroproject.config.shiro.ShiroConfiguration$$EnhancerBySpringCGLIB$$be2ca2b3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:04.601 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'hashedCredentialsMatcher' of type [org.apache.shiro.authc.credential.HashedCredentialsMatcher] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:04.748 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:04.753 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'mybatisPlusConfigure' of type [com.myself.shiroproject.config.pageconfig.MybatisPlusConfigure$$EnhancerBySpringCGLIB$$ca8d2469] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:04.760 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'paginationInterceptor' of type [com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:04.765 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$23c4677] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:04.773 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:04.774 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$2e024aae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:04.779 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'dynamicDataSourceCreator' of type [com.baomidou.dynamic.datasource.DynamicDataSourceCreator] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:04.781 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'dynamicDataSourceProvider' of type [com.baomidou.dynamic.datasource.provider.YmlDynamicDataSourceProvider] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:04.816 [main] INFO  com.zaxxer.hikari.HikariDataSource 80- base - Starting...
+2020-06-28 11:03:05.065 [main] INFO  com.zaxxer.hikari.HikariDataSource 82- base - Start completed.
+2020-06-28 11:03:05.065 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource 189- 初始共加载 1 个数据源
+2020-06-28 11:03:05.066 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource 135- 动态数据源-加载 base 成功
+2020-06-28 11:03:05.066 [main] INFO  c.b.dynamic.datasource.DynamicRoutingDataSource 198- 当前的默认数据源是单数据源，数据源名为 base
+2020-06-28 11:03:05.066 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'dataSource' of type [com.baomidou.dynamic.datasource.DynamicRoutingDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:05.207 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'iSqlInjector' of type [com.baomidou.mybatisplus.extension.injector.LogicSqlInjector] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:05.544 [main] WARN  c.b.mybatisplus.core.toolkit.TableInfoHelper 255- Warn: Could not find @TableId in Class: com.myself.shiroproject.dao.RegistrantMapper.
+2020-06-28 11:03:05.633 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:05.657 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:05.658 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:05.659 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'userMapper' of type [com.sun.proxy.$Proxy74] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:05.661 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'redisConfig' of type [com.myself.shiroproject.config.redis.RedisConfig$$EnhancerBySpringCGLIB$$15cab27d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:05.670 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'spring.redis-org.springframework.boot.autoconfigure.data.redis.RedisProperties' of type [org.springframework.boot.autoconfigure.data.redis.RedisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:05.671 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration' of type [org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:05.863 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'lettuceClientResources' of type [io.lettuce.core.resource.DefaultClientResources] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:06.065 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'redisConnectionFactory' of type [org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:06.256 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'redisTemplate' of type [org.springframework.data.redis.core.RedisTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:06.256 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'redisUtil' of type [com.myself.shiroproject.util.redis.RedisUtil] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:06.256 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'loginServiceImpl' of type [com.myself.shiroproject.service.impl.LoginServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:06.258 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'roleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:06.259 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'roleMapper' of type [com.sun.proxy.$Proxy77] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:06.259 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'roleServiceImpl' of type [com.myself.shiroproject.service.impl.RoleServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:06.261 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'permissionsMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:06.262 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'permissionsMapper' of type [com.sun.proxy.$Proxy78] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:06.263 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'permissionsServiceImpl' of type [com.myself.shiroproject.service.impl.permissionsServiceImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:06.263 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'authRealm' of type [com.myself.shiroproject.config.shiro.AuthRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:06.814 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'sessionListener' of type [com.myself.shiroproject.config.shiro.ShiroSessionListener] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:06.824 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'sessionIdCookie' of type [org.apache.shiro.web.servlet.SimpleCookie] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:06.828 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'sessionManager' of type [org.apache.shiro.web.session.mgt.DefaultWebSessionManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:06.830 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:06.873 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:06.923 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'dsProcessor' of type [com.baomidou.dynamic.datasource.processor.DsHeaderProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:06.931 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker 330- Bean 'dynamicDatasourceAnnotationAdvisor' of type [com.baomidou.dynamic.datasource.aop.DynamicDataSourceAnnotationAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-28 11:03:07.375 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer 92- Tomcat initialized with port(s): 9011 (http)
+2020-06-28 11:03:07.387 [main] INFO  org.apache.coyote.http11.Http11NioProtocol 173- Initializing ProtocolHandler ["http-nio-9011"]
+2020-06-28 11:03:07.387 [main] INFO  org.apache.catalina.core.StandardService 173- Starting service [Tomcat]
+2020-06-28 11:03:07.388 [main] INFO  org.apache.catalina.core.StandardEngine 173- Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-06-28 11:03:07.825 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] 173- Initializing Spring embedded WebApplicationContext
+2020-06-28 11:03:07.826 [main] INFO  org.springframework.web.context.ContextLoader 284- Root WebApplicationContext: initialization completed in 6902 ms
+2020-06-28 11:03:07.957 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor 478- Autowired annotation is not supported on static fields: private static java.util.concurrent.ConcurrentHashMap com.myself.shiroproject.util.common.WebsocketUtil.onlineHashMap
+2020-06-28 11:03:08.300 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor 181- Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-28 11:03:08.433 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping 58- Adding welcome page template: index
+2020-06-28 11:03:08.583 [main] WARN  org.thymeleaf.templatemode.TemplateMode 150- [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-06-28 11:03:09.249 [main] INFO  org.apache.coyote.http11.Http11NioProtocol 173- Starting ProtocolHandler ["http-nio-9011"]
+2020-06-28 11:03:09.299 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer 204- Tomcat started on port(s): 9011 (http) with context path ''
+2020-06-28 11:03:09.302 [main] INFO  com.myself.shiroproject.ShiroprojectApplication 61- Started ShiroprojectApplication in 9.766 seconds (JVM running for 11.418)
+2020-06-28 11:07:01.458 [http-nio-9011-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] 173- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-28 11:07:01.458 [http-nio-9011-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet 525- Initializing Servlet 'dispatcherServlet'
+2020-06-28 11:07:01.467 [http-nio-9011-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet 547- Completed initialization in 8 ms
+2020-06-28 11:07:01.495 [http-nio-9011-exec-1] INFO  o.a.s.session.mgt.AbstractValidatingSessionManager 233- Enabling session validation scheduler...
+2020-06-28 11:07:01.533 [http-nio-9011-exec-1] WARN  org.apache.shiro.mgt.AbstractRememberMeManager 449- There was a failure while trying to retrieve remembered principals.  This could be due to a configuration problem or corrupted principals.  This could also be due to a recently changed encryption key, if you are using a shiro.ini file, this property would be 'securityManager.rememberMeManager.cipherKey' see: http://shiro.apache.org/web.html#Web-RememberMeServices. The remembered identity will be forgotten and not used for this request.
+2020-06-28 11:07:01.539 [http-nio-9011-exec-1] WARN  org.apache.shiro.mgt.DefaultSecurityManager 617- Delegate RememberMeManager instance of type [org.apache.shiro.web.mgt.CookieRememberMeManager] threw an exception during getRememberedPrincipals().
+org.apache.shiro.crypto.CryptoException: Unable to execute 'doFinal' with cipher instance [javax.crypto.Cipher@f40bba8].
+	at org.apache.shiro.crypto.JcaCipherService.crypt(JcaCipherService.java:462)
+	at org.apache.shiro.crypto.JcaCipherService.crypt(JcaCipherService.java:445)
+	at org.apache.shiro.crypto.JcaCipherService.decrypt(JcaCipherService.java:390)
+	at org.apache.shiro.crypto.JcaCipherService.decrypt(JcaCipherService.java:382)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.decrypt(AbstractRememberMeManager.java:482)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.convertBytesToPrincipals(AbstractRememberMeManager.java:419)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.getRememberedPrincipals(AbstractRememberMeManager.java:386)
+	at org.apache.shiro.mgt.DefaultSecurityManager.getRememberedIdentity(DefaultSecurityManager.java:612)
+	at org.apache.shiro.mgt.DefaultSecurityManager.resolvePrincipals(DefaultSecurityManager.java:500)
+	at org.apache.shiro.mgt.DefaultSecurityManager.createSubject(DefaultSecurityManager.java:346)
+	at org.apache.shiro.subject.Subject$Builder.buildSubject(Subject.java:845)
+	at org.apache.shiro.web.subject.WebSubject$Builder.buildWebSubject(WebSubject.java:148)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.createSubject(AbstractShiroFilter.java:292)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:359)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: javax.crypto.BadPaddingException: Given final block not properly padded
+	at com.sun.crypto.provider.CipherCore.doFinal(CipherCore.java:975)
+	at com.sun.crypto.provider.CipherCore.doFinal(CipherCore.java:833)
+	at com.sun.crypto.provider.AESCipher.engineDoFinal(AESCipher.java:446)
+	at javax.crypto.Cipher.doFinal(Cipher.java:2165)
+	at org.apache.shiro.crypto.JcaCipherService.crypt(JcaCipherService.java:459)
+	... 44 common frames omitted
+2020-06-28 11:07:01.740 [http-nio-9011-exec-2] DEBUG c.m.shiroproject.dao.RegistrantMapper.selectAll 159- ==>  Preparing: SELECT r.registrant_id,r.registrant_name, r.registrant_age, r.registrant_sex, r.registrant_education, r.registrant_phone,e.evaluation_regist_id,e.evaluation_score FROM ( SELECT evaluation.evaluation_regist_id,evaluation.evaluation_score, MAX( evaluation.evaluation_creat_time ) FROM evaluation GROUP BY evaluation_regist_id ) AS e LEFT JOIN registrant AS r ON r.registrant_id = e.evaluation_regist_id WHERE r.registrant_phone IS NOT NULL 
+2020-06-28 11:07:01.753 [http-nio-9011-exec-2] DEBUG c.m.shiroproject.dao.RegistrantMapper.selectAll 159- ==> Parameters: 
+2020-06-28 11:07:02.172 [http-nio-9011-exec-2] DEBUG c.m.shiroproject.dao.RegistrantMapper.selectAll 159- <==      Total: 5
+2020-06-28 11:07:03.176 [http-nio-9011-exec-2] DEBUG c.m.shiroproject.dao.RegistrantMapper.selectAll 159- ==>  Preparing: SELECT r.registrant_id,r.registrant_name, r.registrant_age, r.registrant_sex, r.registrant_education, r.registrant_phone,e.evaluation_regist_id,e.evaluation_score FROM ( SELECT evaluation.evaluation_regist_id,evaluation.evaluation_score, MAX( evaluation.evaluation_creat_time ) FROM evaluation GROUP BY evaluation_regist_id ) AS e LEFT JOIN registrant AS r ON r.registrant_id = e.evaluation_regist_id WHERE r.registrant_phone IS NOT NULL 
+2020-06-28 11:07:03.176 [http-nio-9011-exec-2] DEBUG c.m.shiroproject.dao.RegistrantMapper.selectAll 159- ==> Parameters: 
+2020-06-28 11:07:03.179 [http-nio-9011-exec-2] DEBUG c.m.shiroproject.dao.RegistrantMapper.selectAll 159- <==      Total: 5
+2020-06-28 11:07:15.387 [http-nio-9011-exec-5] INFO  com.myself.shiroproject.controller.LoginController 65- userName:admin----userPassword123456
+2020-06-28 11:07:15.633 [http-nio-9011-exec-5] INFO  io.lettuce.core.EpollProvider 68- Starting without optional epoll library
+2020-06-28 11:07:15.635 [http-nio-9011-exec-5] INFO  io.lettuce.core.KqueueProvider 70- Starting without optional kqueue library
+2020-06-28 11:07:16.570 [http-nio-9011-exec-6] WARN  org.springframework.web.servlet.PageNotFound 1251- No mapping for GET /shiro/static/js/jquery-3.4.1.min.js
+2020-06-28 11:07:18.589 [http-nio-9011-exec-3] WARN  org.springframework.web.servlet.PageNotFound 1251- No mapping for GET /favicon.ico
+2020-06-28 12:07:01.498 [SessionValidationThread-1] INFO  o.a.s.session.mgt.AbstractValidatingSessionManager 275- Validating all active sessions...
+2020-06-28 12:07:01.511 [SessionValidationThread-1] INFO  o.a.s.session.mgt.AbstractValidatingSessionManager 308- Finished session validation.  [1] sessions were stopped.
+2020-06-28 13:07:05.093 [SessionValidationThread-1] INFO  o.a.s.session.mgt.AbstractValidatingSessionManager 275- Validating all active sessions...
+2020-06-28 13:07:05.098 [SessionValidationThread-1] INFO  o.a.s.session.mgt.AbstractValidatingSessionManager 308- Finished session validation.  No sessions were stopped.
+2020-06-28 14:07:05.093 [SessionValidationThread-1] INFO  o.a.s.session.mgt.AbstractValidatingSessionManager 275- Validating all active sessions...
+2020-06-28 14:07:05.096 [SessionValidationThread-1] INFO  o.a.s.session.mgt.AbstractValidatingSessionManager 308- Finished session validation.  No sessions were stopped.
+2020-06-28 15:07:05.093 [SessionValidationThread-1] INFO  o.a.s.session.mgt.AbstractValidatingSessionManager 275- Validating all active sessions...
+2020-06-28 15:07:05.093 [SessionValidationThread-1] INFO  o.a.s.session.mgt.AbstractValidatingSessionManager 308- Finished session validation.  No sessions were stopped.
+2020-06-28 16:07:05.093 [SessionValidationThread-1] INFO  o.a.s.session.mgt.AbstractValidatingSessionManager 275- Validating all active sessions...
+2020-06-28 16:07:05.093 [SessionValidationThread-1] INFO  o.a.s.session.mgt.AbstractValidatingSessionManager 308- Finished session validation.  No sessions were stopped.
+2020-06-28 17:07:05.094 [SessionValidationThread-1] INFO  o.a.s.session.mgt.AbstractValidatingSessionManager 275- Validating all active sessions...
+2020-06-28 17:07:05.094 [SessionValidationThread-1] INFO  o.a.s.session.mgt.AbstractValidatingSessionManager 308- Finished session validation.  No sessions were stopped.
+2020-06-28 18:07:05.093 [SessionValidationThread-1] INFO  o.a.s.session.mgt.AbstractValidatingSessionManager 275- Validating all active sessions...
+2020-06-28 18:07:05.093 [SessionValidationThread-1] INFO  o.a.s.session.mgt.AbstractValidatingSessionManager 308- Finished session validation.  No sessions were stopped.

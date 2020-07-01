@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <script type="text/javascript" src="../static/js/jquery-3.4.1.min.js" ></script>
+    <script type="text/javascript" src="../static/layui/layui.js" ></script>
+    <link rel="stylesheet" href="../static/layui/css/layui.css" />
+    <script type="text/javascript" src="../static/layui/lay/modules/laydate.js"></script>
+
+    <script type="text/javascript">
+        layui.use(['upload','element','layer'], function(){
+            var upload = layui.upload,
+                element = layui.element,
+                layer = layui.layer;
+            upload.render({
+                elem: '#test4'
+                ,url: '/shiro/fileadd'
+                ,async: false
+                ,method: 'post'
+                ,size: 2097152
+                ,data: {
+                    upgradeType: function(){
+                        return $("input[name='upgradeType']:checked").val();
+                    }
+                }
+                ,auto: false
+                ,xhr:xhrOnProgress
+                ,progress:function(value){//上传进度回调 value进度值
+                    element.progress('js_upload_progress', value+'%')//设置页面进度条
+                }
+                ,accept: 'file' //普通文件
+                ,exts: 'zip|rar|7z' //只允许上传压缩文件
+                ,field:'uploadFile'
+                ,bindAction: '#test9'
+                ,choose: function(obj){
+                    var uploadFileInput=$(".layui-upload-file").val();
+                    var uploadFileName=uploadFileInput.split("\\");
+                    $("#uploadName").text(uploadFileName[uploadFileName.length-1]);
+                }
+                ,before: function(obj){
+                    $("#jindu").css('display','block');
+                    element.progress('js_upload_progress', '0%');//设置页面进度条
+                }
+                ,done: function(res){
+                    layer.msg("上传成功");
+                }
+                ,error: function(index, upload){
+                    element.progress('js_upload_progress', '0%');
+                    layer.msg('上传失败');
+                }
+            });
+        });
+
+
+        //创建监听函数
+        var xhrOnProgress=function(fun) {
+            xhrOnProgress.onprogress = fun; //绑定监听
+            //使用闭包实现监听绑
+            return function() {
+                //通过$.ajaxSettings.xhr();获得XMLHttpRequest对象
+                var xhr = $.ajaxSettings.xhr();
+                //判断监听函数是否为函数
+                if (typeof xhrOnProgress.onprogress !== 'function')
+                    return xhr;
+                //如果有监听函数并且xhr对象支持绑定时就把监听函数绑定上去
+                if (xhrOnProgress.onprogress && xhr.upload) {
+                    xhr.upload.onprogress = xhrOnProgress.onprogress;
+                }
+                return xhr;
+            }
+        }
+    </script>
+    <style>
+        #test4{
+            display:block;margin:400px  auto 0px auto;
+        }
+        #test9{
+            display:block;
+            margin:10px  auto 0px auto;
+            width: 155px;
+        }
+    </style>
+</head>
+<body>
+<div class="layui-progress" lay-filter="js_upload_progress" style="display: none" id="jindu">
+    <div class="layui-progress-bar layui-bg-green" lay-percent="0%"></div>
+</div>
+<button type="button" class="layui-btn layui-btn-primary" id="test4"><i class="layui-icon"></i>只允许压缩文件</button>
+<button type="button" class="layui-btn" id="test9">开始上传</button>
+</body>
+</html>

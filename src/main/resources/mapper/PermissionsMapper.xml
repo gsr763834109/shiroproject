@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.myself.shiroproject.dao.PermissionsMapper">
+  <resultMap id="BaseResultMap" type="com.myself.shiroproject.model.Menu">
+      <id column="menu_id" jdbcType="INTEGER" property="menuId" />
+      <result column="menu_name" jdbcType="VARCHAR" property="menuName" />
+      <result column="menu_url" jdbcType="VARCHAR" property="menuUrl" />
+      <result column="menu_pid" jdbcType="INTEGER" property="menuPid" />
+      <result column="menu_perms" jdbcType="VARCHAR" property="menuPerms" />
+      <result column="menu_icon" jdbcType="VARCHAR" property="menuIcon" />
+      <result column="menu_creat_time" jdbcType="TIMESTAMP" property="menuCreatTime" />
+      <result column="menu_update_time" jdbcType="TIMESTAMP" property="menuUpdateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    menu_id, menu_name, menu_url, menu_pid, menu_perms, menu_icon, menu_creat_time, menu_update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    SELECT
+      <include refid="Base_Column_List" />
+    FROM
+        menu
+    WHERE
+      menu_id IN (
+      SELECT
+      rm.menu_id
+      FROM
+      role_menu rm
+      LEFT JOIN role r ON rm.role_id = r.role_id
+      LEFT JOIN user_role ur ON r.role_id = ur.ur_role_id
+      LEFT JOIN USER u ON u.user_id = ur.ur_user_id
+      WHERE
+      u.user_name = #{userName}
+      )
+  </select>
+
+</mapper>

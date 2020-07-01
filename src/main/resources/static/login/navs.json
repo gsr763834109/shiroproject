@@ -1,0 +1,426 @@
+{
+	"code": 0,
+	"msg": "ok",
+	"data": [
+		{
+			"id": 1,
+			"parentId": null,
+			"code": "console",
+			"title": "控制台",
+			"icon": "layui-icon-console",
+			"enable": true,
+			"href": "",
+			"children": [
+				{
+					"id": 11,
+					"parentId": 1,
+					"code": "control",
+					"title": "管理中心",
+					"icon": "layui-icon-app",
+					"enable": true,
+					"href": "",
+					"children": [
+						{
+							"id": 111,
+							"parentId": 11,
+							"code": "main",
+							"title": "后台首页",
+							"icon": "layui-icon-home",
+							"enable": true,
+							"href": "page/home.html"
+						},
+						{
+							"id": 112,
+							"parentId": 11,
+							"code": "profile",
+							"title": "个人资料",
+							"icon": "layui-icon-user",
+							"enable": true,
+							"href": "page/user/userProfile.html"
+						},
+						{
+							"id": 113,
+							"parentId": 11,
+							"code": "changePassword",
+							"title": "修改密码",
+							"icon": "layui-icon-password",
+							"enable": true,
+							"href": "page/user/changePassword.html"
+						}
+					]
+				},
+				{
+					"id": 12,
+					"parentId": 1,
+					"code": "message",
+					"title": "消息中心",
+					"icon": "layui-icon-notice",
+					"enable": true,
+					"href": "",
+					"children": [
+						{
+							"id": 121,
+							"parentId": 12,
+							"code": "messageInbox",
+							"title": "收件箱",
+							"icon": "layui-icon-templeate-1",
+							"href": "page/message/inbox.html"
+						}
+					]
+				},
+				{
+					"id": 13,
+					"parentId": 1,
+					"code": "help",
+					"title": "帮助",
+					"icon": "layui-icon-survey",
+					"enable": true,
+					"href": "",
+					"children": [
+						{
+							"id": 131,
+							"parentId": 13,
+							"code": "about",
+							"title": "关于",
+							"icon": "layui-icon-about",
+							"enable": true,
+							"href": "page/help/about.html"
+						},
+						{
+							"id": 133,
+							"parentId": 13,
+							"code": "postChapter",
+							"title": "开发者编写操作文档",
+							"icon": "layui-icon-edit",
+							"enable": true,
+							"href": "page/help/postChapter.html"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 2,
+			"parentId": null,
+			"code": "cms",
+			"title": "内容管理",
+			"icon": "layui-icon-read",
+			"enable": true,
+			"href": "",
+			"children": [
+				{
+					"id": 21,
+					"parentId": 2,
+					"code": "channelList",
+					"title": "网站导航设置",
+					"icon": "layui-icon-menu-fill",
+					"enable": true,
+					"href": "page/channel/list.html"
+				}, {
+					"id": 22,
+					"parentId": 2,
+					"code": "categoryList",
+					"title": "栏目分类设置",
+					"icon": "layui-icon-util",
+					"enable": true,
+					"href": "page/category/list.html"
+				}, 
+				{
+					"id": 23,
+					"parentId": 2,
+					"code": "post",
+					"title": "文章管理",
+					"icon": "layui-icon-file",
+					"enable": true,
+					"href": "",
+					"children": [
+						{
+							"id": 231,
+							"parentId": 23,
+							"code": "postAdd",
+							"title": "发文章",
+							"icon": "layui-icon-add-circle",
+							"enable": true,
+							"href": "page/post/add.html"
+						},
+						{
+							"id": 232,
+							"parentId": 23,
+							"code": "postList",
+							"title": "文章管理",
+							"icon": "layui-icon-file",
+							"enable": true,
+							"href": "page/post/list.html"
+						}
+					]
+				},
+				{
+					"id": 24,
+					"parentId": 2,
+					"code": "gallery",
+					"title": "图集管理",
+					"icon": "layui-icon-carousel",
+					"enable": true,
+					"href": "",
+					"children": [
+						{
+							"id": 241,
+							"parentId": 24,
+							"code": "galleryAdd",
+							"title": "发图集",
+							"icon": "layui-icon-add-circle",
+							"enable": true,
+							"href": "page/gallery/add.html"
+						},{
+							"id": 242,
+							"parentId": 24,
+							"code": "galleryList",
+							"title": "图集管理",
+							"icon": "layui-icon-carousel",
+							"enable": true,
+							"href": "page/gallery/list.html"
+						}
+					]
+				},
+				{
+					"id": 25,
+					"parentId": 2,
+					"code": "video",
+					"title": "视频管理",
+					"icon": "layui-icon-video",
+					"enable": true,
+					"href": "",
+					"children": [
+						{
+							"id": 251,
+							"parentId": 25,
+							"code": "videoAdd",
+							"title": "发视频",
+							"icon": "layui-icon-add-circle",
+							"enable": true,
+							"href": "page/video/add.html"
+						},{
+							"id": 252,
+							"parentId": 25,
+							"code": "videoList",
+							"title": "视频管理",
+							"icon": "layui-icon-video",
+							"enable": true,
+							"href": "page/post/list.html"
+						}
+					]
+				},
+				{
+					"id": 29,
+					"parentId": 2,
+					"code": "matter",
+					"title": "素材管理",
+					"icon": "layui-icon-star",
+					"enable": true,
+					"href": "",
+					"children": [
+						{
+							"id": 291,
+							"parentId": 29,
+							"code": "matterList",
+							"title": "素材概览",
+							"icon": "layui-icon-template",
+							"enable": true,
+							"href": "page/post/list.html"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": 9,
+			"parentId": null,
+			"code": "system",
+			"title": "系统管理",
+			"icon": "layui-icon-set",
+			"enable": true,
+			"href": "",
+			"children": [
+				{
+					"id": 91,
+					"parentId": 9,
+					"code": "systemSettings",
+					"title": "系统设置",
+					"icon": "layui-icon-util",
+					"enable": true,
+					"href": "",
+					"children": [
+						{
+							"id": 911,
+							"parentId": 91,
+							"code": "website",
+							"title": "系统基本参数",
+							"icon": "layui-icon-form",
+							"enable": true,
+							"href": "page/sysConfig/index.html"
+						},
+						{
+							"id": 912,
+							"parentId": 91,
+							"code": "dictionaryList",
+							"title": "数据字典管理",
+							"icon": "layui-icon-table",
+							"enable": true,
+							"href": "page/dictionary/list.html"
+						}
+					]
+				},
+				{
+					"id": 92,
+					"parentId": 9,
+					"code": "navigation",
+					"title": "系统菜单管理",
+					"icon": "layui-icon-release",
+					"enable": true,
+					"href": "",
+					"children": [
+						{
+							"id": 921,
+							"parentId": 92,
+							"code": "navigationAdd",
+							"title": "新建后台导航菜单",
+							"icon": "layui-icon-add-circle",
+							"enable": true,
+							"href": "page/navigation/add.html"
+						}, {
+							"id": 922,
+							"parentId": 92,
+							"code": "navigationList",
+							"title": "后台导航菜单列表",
+							"icon": "layui-icon-file",
+							"enable": true,
+							"href": "page/navigation/list.html"
+						}
+					]
+				},
+				{
+					"id": 93,
+					"parentId": 9,
+					"code": "orgUnit",
+					"title": "组织结构管理",
+					"icon": "layui-icon-component",
+					"enable": true,
+					"href": "",
+					"children": [
+						{
+							"id": 931,
+							"parentId": 93,
+							"code": "orgAdd",
+							"title": "新建组织结构",
+							"icon": "layui-icon-add-circle",
+							"enable": true,
+							"href": "page/orgUnit/add.html"
+						}, {
+							"id": 932,
+							"parentId": 93,
+							"code": "orgList",
+							"title": "组织结构列表",
+							"icon": "layui-icon-tree",
+							"enable": true,
+							"href": "page/orgUnit/list.html"
+						}
+					]
+				},
+				{
+					"id": 94,
+					"parentId": 9,
+					"code": "accountUser",
+					"title": "用户及角色管理",
+					"icon": "layui-icon-user",
+					"enable": true,
+					"href": "",
+					"children": [
+						{
+							"id": 941,
+							"parentId": 94,
+							"code": "accountUserAdd",
+							"title": "新建管理员",
+							"icon": "layui-icon-add-circle",
+							"enable": true,
+							"href": "page/accountUser/list.html"
+						},
+						{
+							"id": 942,
+							"parentId": 94,
+							"code": "accountUserList",
+							"title": "管理员列表",
+							"icon": "layui-icon-user",
+							"enable": true,
+							"href": "page/accountUser/list.html"
+						},
+						{
+							"id": 943,
+							"parentId": 94,
+							"code": "accountRoleAdd",
+							"title": "新建角色",
+							"icon": "layui-icon-add-circle",
+							"enable": true,
+							"href": "page/accountRole/list.html"
+						},
+						{
+							"id": 944,
+							"parentId": 94,
+							"code": "accountRoleList",
+							"title": "角色列表",
+							"icon": "layui-icon-group",
+							"enable": true,
+							"href": "page/accountRole/list.html"
+						}
+					]
+				},
+				{
+					"id": 99,
+					"parentId": 9,
+					"code": "morePages",
+					"title": "其他页面",
+					"icon": "layui-icon-layer",
+					"enable": true,
+					"href": "",
+					"children": [
+						{
+							"id": 991,
+							"parentId": 99,
+							"code": "cssFormat",
+							"title": "CSS格式化",
+							"icon": "layui-icon-fonts-code",
+							"enable": true,
+							"href": "page/morepages/cssformat.html"
+						},
+						{
+							"id": 992,
+							"parentId": 992,
+							"code": "layui-select-input",
+							"title": "Layui select 可输入",
+							"icon": "layui-icon-note",
+							"enable": true,
+							"href": "page/morepages/layui-select-input.html"
+						},
+						{
+							"id": 993,
+							"parentId": 99,
+							"code": "403",
+							"title": "403 Forbidden页面",
+							"icon": "layui-icon-face-cry",
+							"enable": true,
+							"href": "page/403.html"
+						},
+						{
+							"id": 994,
+							"parentId": 99,
+							"code": "404",
+							"title": "404 Not Found页面",
+							"icon": "layui-icon-404",
+							"enable": true,
+							"href": "page/404.html"
+						}
+					]
+				}
+			]
+		}
+	]
+}

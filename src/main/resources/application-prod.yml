@@ -1,0 +1,83 @@
+#设置HTTP请求头大小限制，默认为1M，-1为取消
+server:
+  tomcat:
+    max-http-post-size: -1
+  port: 9011
+
+datasource:
+  mysql:
+    jdbc-url: jdbc:mysql://rm-bp1g73d9jyf09286vgo.mysql.rds.aliyuncs.com:3306/attention2?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC&allowMultiQueries=true&useSSL=true&verifyServerCertificate=false
+    #    username: root
+    #    password: root
+    username: vici
+    password: Vici123456
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 200
+    initialSize: 10
+    maxWait: 60000
+    minIdle: 20
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: "select 1"
+    testWhileIdle: true
+    maxOpenPreparedStatements: 20
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    useGlobalDataSourceStat: true
+    logging.config: classpath:logback-spring.xml
+
+vici:
+  imagePath: D:/tomcat/nginx-1.10.3/static/imgs/photo/QRcode/    #二维码的存放位置，凌晨两点进行二维码的清除
+  radarPath: D:/tomcat/nginx-1.10.3/static/imgs/photo/radar/
+  shareTestPath: D:/tomcat/nginx-1.10.3/static/imgs/photo/shareTestimage/
+  newattentionPath: http://vr.vrvici.com
+  pdfPath: D:/tomcat/nginx-1.10.3/static/imgs/photo/pdf/
+  creatPdfPath: D:/tomcat/nginx-1.10.3/static/imgs/photo/creatpdf/
+#pagehelper:
+#  dialect: mysql
+#  reasonable: true
+#  support-methods-arguments: true
+#  params: count=countSql
+mybatis:
+# type-aliases-package: com.vici.attention2.model
+# mapper-locations: classpath*:/dao/*Mapper.xml
+
+
+
+# 沙箱账号
+pay:
+  alipay:
+    #    gatewayUrl: https://openapi.alipaydev.com/gateway.do
+    #    appid: 2016081900287404
+    #    #    APP私钥
+    #    appPrivateKey: MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCm3JfW282Y9wPfuc5EPpC9uAjYOAG6hhOwhKtT5BRkWo+dCfFOjhReWZ4LrJPa+R0BTvBLL/lAPhUJC4TX2XvdT01kV4Kjtf2aSJSEMkUV2PVehEpLZB45vmunCWM8ItY7VdEFM4crzhd5cRFbZib4tdmXnlURTmUvj7BstHvyNkARmoiL8QhdgvBrBJYR2c93ugkuldNOxDFV6rC0Ho+QWBN8YOlmSKVFG4YA+maA6bQQabW5BlpLnJivJ5duGuYsxu0VL8KZV3eGgRChO6shkBwvp8S2nBy2rxJkwxhajC5U6aBr/O+Z5AfchlUJFuwYyFaILCx9VFgu2rHj6W43AgMBAAECggEACSAHLbjXhYX8sD95CEJjp/xof2qQraKncP/QXsYaV2Kcd/oTODiM5JwCCKFndJIrA+dNPM9i0iCTBeubWDKMk43CrbobatiJBebyOEiHfqpewMx7Q6Q2AvJm8LuSsbc2AAixZZdrzPl4Tyvfxx/PAcrwG1qNTGT9I5y4CTnVjWlTBVMHZxcXBwtjlDOktfFKdM+JdHZj5X2WIYspJ2H7KcfRzQoGwj/Uz3bHOAm4ksuulrtqXWNUSihiUyojymEnUOBkXlRdoLdnNnJ3uYdo/HVzzVjsyX9Bt77o9hBiz5JZ8kpNm5PcZSLEFsR2hbWBDUz8vZpKMhiMaKLNqHPQAQKBgQD9HjTjtKgPGmhhephOhZQn0+cJa7F/4sALgu67DimbBLRSMVP9MAFPGaxKTzxRZJu2aEQweIQ8brmkds0MEfteoUiGAbaXT+zN5y4gOd0cK7wXbJPo9qAb1wNS4qqdcEJ8CKHyALby7hj5A9v7qxfxUZwo/nvVQ+M+kKQuTK01zQKBgQCowvcFQtJAQKU6ZZ8SSrNXNEDWVTBM2+kILAjo5SlYRtrthH3LVc7VE7/mEIhTEtubMtxMn4e2CtaiQJswwFdoivF04bTi7HxhxqHtQtwX06dttHRHAWjqqMTXJyRq6w/frkMd/71q4rXT4TKK7SMRb1AINcIRxKyirSBZpNgwEwKBgDwVoI5xAvfa1+5T0LXLBblSluRomRD3fYj+AreKjBvNSRS9uuc+LwFc4cYd+v6DOGdbZtxur009J3o/7TqxRg9Xj8SnwXU3tsnF1/A0bCVUyGhzEMVbTfRt3M8fGUsYK+APmIm+267dEDaEUQLzwVI6gixFBJZCcD4YzbBj6TX9AoGAWmJxImQzby4wUCJ1G7reamoV/7UIdWGiYToUW4fAqQLp5iP7q5d9eylksbdRDA0hiPGog3E9ogYUBjpL48RgDCG+SDdKRe8aftN/ji8s6aX2Gg935z+eDW/uXL0eCBV1HvuZ/ssli8V4VM5b34Q6L/BKENuZ4SJQw5+tn9Vl4/kCgYEA0aHNvKlssj9N1C6BX8cHjxtzMMiVTCrNO7N1/gIB6jm996pYlzR4QhsQt9bI/SEwiCjJYHDDHge9NOfWub1pSC6yqRIH+Woywsw0EjFQ72tnmzeBhpabD7prWlT+ENfKg2LlICRs8iXxhbklv0UVtuZ3N14nmBfy8mAKa/mgorw=
+    #    #    支付宝公钥
+    #    alipayPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAn4YnGE04zkn9tox943JQGtt7gzMYj3A8NmJYGVV5qWAaIqSF5tvhmdWByKf4qK29AycMXPKeOFMmDO6dVZua4AgkzC2WhvU/92vmGXIX9UbqxxrueHAhK7QgktKz3/v07ePo/ItPeNtVFV7iTxlnKzmt82n1plbZhVAfbqREVyuYzPrSnOOPL2XUb6GW59+t8wmMHDpIV7ph44MBa4GbcPjLQN4+rGPOZcwsevgPUoA9gNliHNQm/y+E+NcjV1YSqkomXmI/Y5KPTsWFJIElntJICNgsCBFv2GLJVJy5jSOk8s/DJljZgib3kAFv6AsUwxdFPNgCG41wpP1YAA3FLwIDAQAB
+    #    returnUrl: http://he5t2e.natappfree.cc/alipay/page/return
+    #    notifyUrl: http://he5t2e.natappfree.cc/alipay/notify
+
+    #公司支付宝信息
+    gatewayUrl: https://openapi.alipay.com/gateway.do
+    appid: 2019022763411365
+    #    APP私钥
+    appPrivateKey: MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDlBBJAZqlv+r8vuvAeJxLCq9AymedY6L3jy/HzaujmDtnID+vTzPHuALlqOT+Omnugv4kNpAZDmPk4+zG1VdMcKroV71tlZI+Rf4XjJGHcZYzwXUXRVxEhbZ8CBWTXWnqng5nkotqs1vM3PrquxuyhRzE8CKYHjEqumfoXE64sGcrWu2Vi3CxScKaKE5yOopzKtYyl70DW26nwZqK9J/QBtTxqbBZDPJ1FOZ3vb/x0ZDX6AxS/4fcNgao243A2iRHzvmUcCzIJ72C60qkDvFjij/OvDqMYiWFUerFqOMWE8XUUAxeChM/kxBawBKhziundV0gSdzS+5zIcQBEQthqbAgMBAAECggEBAIqP4AsfEj0yVSKn1EgqE+u80IcNHzBoARwmdQl2Edu/+HxXRbQsN+Rsg8KFSLMbPNmRiXa7Wx7jG0cilHzGpKhSIazL2VyLb2H06ij4Bk23E4MKrAdwymiTTrWGVfEGSVe5BA+ViQEyPI2cYo8ExH7/+AX+pZXDiBwEBZCY07TR8SoSeH1JX8/xGjV9LNFHAyvLSaYfzXnbGeiFeY8wOUwwaDcBwSneggMn+g5NdCLniH4JJ5jBj55T77NfPfcigOhGemaSojd4xQiQJf6BmoK1BPb41ha5yrptfhsMO5b8bBZbrUrsHhtjeTlMnU06UP60Rj+8sjIIG0UfZzVJOUECgYEA88s/uzDWtDRfUpLdsR9zopVkF/xm9nRd8+iwFToBBdCYaYiEBUZeq5G+6NUmH3s/NI0asMv2mL3UTyWBexzhsCRRXb/AbglzUb8iqIT1uF/B8uHIjnUG7T2cMeNUd7TPXMmUsjhV2aTDGnw8XzlJzmVECoMxrrXh/hh1YVeufukCgYEA8Hto2RGZcAAAefZ905URxEtHc8ZruyZ/IggG595acpEDsZklS6nyMQMv7+qlKdnY4NmyTZOIxHLT0kdwxau3FUy0kleV1Taeom72EtbkbA8c+iOeraB9JmhEX4A2xVxImv9PC/ilVehldwuWWaPhNLgPfV9SbGZIwIt1E1L3wuMCgYA336EfmbXbXxVpq1c7vOWXoX1rMeG3IjxWJkIU21JYrtH/fdYkD1irIaALZK50EJ8PwDcZxeUiZH9AFGx0ds4SvIAZaFUF4wyW86NR1Acs1mVw8OYyIAgSX0ho9pzpQnsz3M9DeT3Tv7snWsnLWSndL8BEWIUOcYj1300nnhzT4QKBgCQcU+0sgF7aETg/NDu+SbGxICSZafnrWPHSRL8ym2BSuDxF49zNwylq8hrToEN9i9yPs/+EJOhi2b3crmlwVIilQQQslLo0fnOjt92yWRCE4HQLPzuROtm2lHXGufK+3cQwjD0e9CzHPd03ZzdErX+OF/1af/T5Evmet1DUh5HDAoGBAI0JAFkzGXz3csNceGKhoNuY/SNL8ZE0RcqlX2HZ1BhFkJv/I4scDjQoKaSL7jn4gtGnAKbKohjLsQ62TFLDS+xVPvzvbUiSqKx0BWuJt5UJ8xD/en/RBBUI7Okvtk/jflCzhFOArZdrQXcVius75OeKMt9BuJDIx4+y16NbaJup
+    #    支付宝公钥
+    alipayPublicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtRY7DM/J2NDSQz13+Vd9Gdme6tU6wKKsQjAU8GzsAHiMvTMWNVIk8qYC5+5tqr2riQY7MtaEvf2SJof8DemS3+eNKBusuPwVZACMdtHNFftOkAA64+3pdrI9bNYTHDJBLXBM6MkG8al0O9d1Ag78UFXsRr+bI1grIICZYjsy1bu1DIdaarM661VcHGYhJV7DHGR231pGQShKtP6KELViSaEfoCEUxCzCvWoT4cgkYLenH3F8N5MDVvuAWhZsQuqMLtzM0EHiACjMWSwsfhIPBd+L4X50I0D5TRHflwE2MWn9nuy7EaKOfT1t75VVfmlSPrWU6S6Mq4lu5UEFIhPZIQIDAQAB
+    returnUrl: https://vr.vrvici.com/attention2/alipay/page/return
+    notifyUrl: https://vr.vrvici.com/attention2/alipay/notify
+
+
+
+
+
+
+
+
+
+
+
+
+
+
