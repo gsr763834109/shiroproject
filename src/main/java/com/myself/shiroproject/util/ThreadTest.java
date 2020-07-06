@@ -14,10 +14,7 @@ public class ThreadTest extends Thread{
      */
     private  int count = 6;
 
-    /*public synchronized void  run(){
-        count--;
-        System.out.println(this.currentThread().getName()+"count = " + count);
-    }*/
+    
     //案例1，
     public  synchronized  void printNum(String tag){
 
